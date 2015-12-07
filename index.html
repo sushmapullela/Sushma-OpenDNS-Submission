@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html ng-app='app'>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="main-container" style="width:1200px; margin:0 auto;">
+        <ng-view></ng-view>
+        </div>
+        
+        
+        <!--scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+        
+        <!--angular scripts-->
+        <script src="scripts/app.js"></script>
+        
+        
+        <!--templates-->
+        <script type="text/ng-template" id="blogFeed.html">
+            <div class="container blogfeed">
+                <div class="blog-container">
+                    <ul class="blog-posts">
+                        <li ng-repeat="blog in blogs">
+                            <div class="blog-post" style="background:linear-gradient(
+                                                                    {{blog.overlay}},
+                                                                    {{blog.overlay}}
+                                                                    ),
+                                                                    url('{{blog.bg}}');
+                                                                    background-size:400px 300px;">
+                                <div class="blog-title">
+                                    <img src="{{blog.title.icon}}">
+                                    <h2>{{blog.title.title}}</h2>
+                                </div>
+                                <br/>
+                                <div class="blog-content">
+                                    <span>{{blog.content}}</span>
+                                </div>
+                                <br/>
+                                <hr>
+                                <div class="blog-footer">
+                                    <span>{{blog.date}}</span>
+                                    <span style="float:right;">Read More..</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </script>
+        <script type="text/ng-template" id="footer.html">
+        <div class="container footer">
+	       OPENDNS
+            </div>
+        </script>
+        
+        <script type="text/ng-template" id="header.html">
+        <div class="container header" style="">
+            <div class="brand-logo" style="">
+                <img src="images/opendns-logo.png" height="50px">
+            </div>
+            <ul>
+                <li style="">
+                    <a href="#page1">page1</a>
+                </li>
+                <li style="">
+                    <a href="#page2">page2</a>
+                </li>
+            </ul>
+        </div>
+        </script>
+        
+        <script type="text/ng-template" id="hero.html">
+        <div class="container hero" style="">
+            <div class="hero-content" style="">
+                <div class="hero-bar" style="">
+                    <div class="hero-content-wrapper" style="">
+                        <div class="hero-sub-content" style="">
+                            <img src="images/business-icon.png" height="50px" width="50px"><br/>
+                            <span style="font-weight:bold;font-size:20px;">FOR BUSINESS</span><br/>
+                            <div class="content" style="font-size:12px;line-height:2;margin-bottom:25px;">
+                                <span>Predict attacks before they happen</span><br/>
+                                <span>Threat protection beyond the perimeter</span><br/>
+                                <span>Remove your DNS blind spot</span>
+                            </div>
+                            <a href="#" style="margin-top:20px;padding:5px;border:1px solid blue;border-radius:3px;">LEARN MORE</a>
+                        </div>
+                        <div class="hero-sub-content" style="">
+                            <img src="images/msp-icon.png" height="50px" width="50px"><br/>
+                            <span style="font-weight:bold;font-size:20px;">FOR MSP AND PARTNERS</span><br/>
+                            <div class="content" style="font-size:12px;line-height:2;margin-bottom:25px;">
+                                <span>Reduce time reacting to malware</span><br/>
+                                <span>Unique product for MSPs</span><br/>
+                                <span>API-level integrations</span>
+                            </div>
+                            <a href="#" style="margin-top:20px;padding:5px;border:1px solid green;border-radius:3px;">LEARN MORE</a>
+                        </div>
+                        <div class="hero-sub-content" style="">
+                            <img src="images/personal-icon.png" height="50px" width="50px"><br/>
+                            <span style="font-weight:bold;font-size:20px;">FOR PERSONAL USE</span><br/>
+                            <div class="content" style="font-size:12px;line-height:2;margin-bottom:25px;">
+                                <span>Noticeably faster Internet access</span><br/>
+                                <span>Flexible parental controls</span><br/>
+                                <span>Identity theft protection</span>
+                            </div>
+                            <a href="#" style="margin-top:20px;padding:5px;border:1px solid yellow;border-radius:3px;">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </script>
+        
+        <script type="text/ng-template" id="learnMore.html">
+        <div class="container learn-more">
+            <div class="content">
+                <div class="content-left" style="margin-left:50px;">
+                    <div class="learn-more-1">
+                        <div class="overlay-content-1" ng-click="showContent(1)">
+                        <label style="font-size:30px;">WHAT'S NEW AT OPENDNS<br/>LIVE WEBCAST 11/12</label>
+                        <div class="content" style="height:340px;">
+
+                        </div>
+                        <div class="footer" style="border-top:1px solid white; width:100%;font-size:25px;padding-top:5px;">
+                            <span>LIVE WEBCAST</span>
+                            <span style="float:right;">Register Now</span>
+                        </div>
+                        </div>
+                        <div class="main-content main-content-1">
+                            <h1>Content</h1>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content-right">
+                    <div class="learn-more-2">
+                        <div class="overlay-content-2" ng-click="showContent(2)">
+                        <label style="font-size:30px;">Introduction to investigate</label>
+                        <div class="content" style="height:120px;">
+
+                        </div>
+                        <div class="footer" style="border-top:1px solid white; width:100%;font-size:25px;padding-top:5px;">
+                            <span>PRODUCT VIDEO</span>
+                            <span style="float:right">Watch Video</span>
+                        </div>
+                        </div>
+                        <div class="main-content main-content-2">
+                            <h1>Content</h1>
+                        </div>
+                    </div>
+                    <div class="learn-more-3">
+                        <div class="overlay-content-3" ng-click="showContent(3)">
+                        <label style="font-size:30px;">What customers are saying</label>
+                        <div class="content" style="height:120px;">
+
+                        </div>
+                        <div class="footer" style="border-top:1px solid white; width:100%;font-size:25px;padding-top:5px;">
+                            <span>CUSTOMER VIDEO</span>
+                            <span style="float:right">Watch Video</span>
+                        </div>
+                        </div>
+                        <div class="main-content main-content-3">
+                            <h1>Content</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </script>
+        
+        <script type="text/ng-template" id="statistics.html">
+        <div class="container statistics" style="width:1200px;height:300px;background-color:#eee;position:relative;">
+            <div class="content-wrapper" style="margin-left:200px;">
+            <div class="content content1" style="">
+                <div class="content-text" style="position:absolute;">
+                    <br/>
+                    <span style="font-size:100px;font-weight:bold;">2%</span><br/>
+                    <span style="font-size:24px;">INTERNET USERS</span>
+                </div>
+            </div>
+            <div class="content content2" style="">
+                <div class="content-text" style="position:absolute;">
+                    <span style="font-size:24px;">NUMBERS WE ARE PROUD OF</span><br/>
+                    <span style="font-size:100px;font-weight:bold;">65</span>&nbsp;<span style="font-size:60px;">million</span><br/>
+                    <span style="font-size:24px;">DAILY ACTIVE USERS</span>
+                </div>
+            </div>
+            <div class="content content3" style="">
+                <div class="content-text" style="position:absolute;">
+                    <span style="font-size:24px;">NUMBERS WE ARE PROUD OF</span><br/>
+                    <span style="font-size:100px;font-weight:bold;">80</span>&nbsp;<span style="font-size:60px;">billion</span><br/>
+                    <span style="font-size:24px;">DAILY DNS REQUESTS</span>
+                </div>
+
+
+            </div>
+            </div>
+        </div>
+        </script>
+        
+        <script type="text/ng-template" id="testimonial.html">
+        <div class="container testimonial" style="width:1200px; height:500px; background-color:#6699FF;position:relative;color:white;">
+            <div class="test-content-wrapper" style="height:400px;padding:85px;">
+            <div class="test-content netflix">
+                <div class="testimonial-quote" style="text-align:center;font-size:24px;">THE MOST TRUSTED BRANDS CHOOSE OPENDNS</div>
+                <br/>
+                <br/>
+                <div class="testimonial-msg" style="padding-left:50px;padding-right:50px;text-align:center;">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="testimonial-name" style="text-align:right;padding-right:50px;">-Sample name</div>
+            </div>
+            <div class="test-content zendesk">
+
+            </div>
+            <div class="test-content evernote">
+
+            </div>
+            <div class="test-content xerox">
+
+            </div>
+            </div>
+            <div class="nav-tab" style="width:100%;height:50px;position:absolute;top:90%;">
+                <div class="btn-wrapper">
+                <button class="tab-btn btn-netflix" ng-click="showTestimonial('netflix')">
+                    <img src="images/netflix-logo.png">
+                </button>
+                <button class="tab-btn btn-zendesk" ng-click="showTestimonial('zendesk')">
+                    <img src="images/zendesk-logo.png">
+                </button>
+                <button class="tab-btn btn-evernote" ng-click="showTestimonial('evernote')">
+                    <img src="images/evernote-logo.png">
+                </button>
+                <button class="tab-btn btn-xerox" ng-click="showTestimonial('xerox')">
+                    <img src="images/xerox-logo.png">
+                </button>
+                </div>
+            </div>
+        </div>
+        </script>
+        
+        <script type="text/ng-template" id="page1.html">
+            <header></header>
+            <hero></hero>
+            <learn-more></learn-more>
+            <statistics></statistics>
+            <footer></footer>
+        </script>
+        
+        <script type="text/ng-template" id="page2.html">
+            <header></header>
+            <testimonial></testimonial>
+            <blog-feed></blog-feed>
+            <footer></footer>
+        </script>
+    </body>
+</html>

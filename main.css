@@ -1,0 +1,251 @@
+body{
+    FONT-FAMILY: "trebuchet ms";
+    margin:0;
+    padding:0;
+    background-color: rgb(221, 221, 221);
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+button{
+    cursor: pointer;
+}
+.main-container{
+    background-color:white;
+}
+* {
+    box-sizing: border-box;
+}
+.learn-more{
+    height:600px;
+    width:1200px;
+    padding:50px;
+}
+
+.learn-more .content-left,.learn-more .content-right {
+	height:500px;
+    width:500px;
+    float:left;
+}
+
+.learn-more-1,.learn-more-2,.learn-more-3 {
+	padding:30px;
+    height:100%;
+    color:white;
+    cursor:pointer;
+}
+
+.learn-more-2,.learn-more-3{
+    height:50%;
+}
+
+.learn-more-1 {
+	background:
+        linear-gradient(
+            rgba(0,0,255,0.45),
+            rgba(0,0,255,0.45)
+        ),
+        url('images/learn-more-1-no-overlay.jpg');
+    background-size:100% 100%;
+}
+
+.learn-more-2 {
+	background:
+        linear-gradient(
+            rgba(255,0,0,0.45),
+            rgba(255,0,0,0.45)
+        ),
+        url('images/learn-more-2-no-overlay.jpg');
+    background-size:100% 100%;
+}
+
+.learn-more-3 {
+	background:
+        linear-gradient(
+            rgba(0,255,0,0.45),
+            rgba(0,255,0,0.45)
+        ),
+        url('images/learn-more-3-no-overlay.jpg');
+    background-size:100% 100%;
+}
+
+.btn-wrapper{
+    width:650px;
+    margin:0 auto;
+}
+
+
+
+.tab-btn{
+    border:0px;
+    width:156px;
+    margin:0px;
+    height:50px;
+    background-color:transparent;
+    border-right:1px solid white;
+    border-left:1px solid white;
+}
+
+.tab-btn img{
+    height:40px;
+    width:140px;
+    margin:0 auto;
+}
+
+.btn-wrapper .active{
+    background: rgba(255,255,255,0.4)
+}
+
+.content-text{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.hero-content{
+    float:left;
+}
+
+.blog-posts{
+    columns:2;
+    -webkit-columns:2;
+    -moz-columns:2;
+}
+
+.blog-posts li{
+    list-style:none;
+}
+
+.blog-post{
+    height:200px;
+    width:400px;
+    border:1px solid #f2f2f2;
+    margin:10px;
+    color:white;
+    cursor:pointer;
+}
+
+.blogfeed{
+    width:1200px;
+    background-color:white;
+    padding:50px;
+}
+
+.blog-title img{
+    float:left;
+    height:30px;
+    margin:10px;
+}
+
+.blog-content{
+    padding-left:10px;
+}
+
+.blog-footer{
+    padding:10px;
+}
+
+.footer{
+    width:1200px;
+    height:50px;
+    background-color:#37474F;
+    color:white;
+    padding:15px;
+}
+
+.header{
+    width:1200px;
+    height:70px;
+    background-color:black;
+    color:white;
+    padding:10px;
+}
+
+.brand-logo{
+    height:55px;
+    padding:5px;
+    float:left;
+}
+
+.header ul li{
+    list-style:none;
+    display:inline;
+    margin:0px 10px 0px 10px;
+}
+
+.hero{
+   height:600px;
+    width:1200px;
+    background:url('images/hero-overlay.jpg');
+    background-size:1200px 600px;
+    position:relative; 
+}
+
+.hero-content{
+    position:absolute;
+    bottom:0;
+}
+
+.hero-bar{
+    width:1200px;
+    height:250px;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.hero-content-wrapper{
+    margin:0 auto;
+    width:750px;
+    height:250px;
+    color:white;
+}
+
+.hero-sub-content{
+    height:250px;
+    width:250px;
+    text-align:center;
+    padding:10px;
+    float:left;
+}
+
+.content1{
+    float:left;
+    left:200px;
+    height:300px;
+    width:500px;
+    position:absolute;
+    z-index:0;
+    background:url('images/numbers-1-no-text.png');
+    background-size:500px 300px;
+    text-align:center;
+}
+
+.content2{
+    float:left;
+    position:absolute;
+    height:300px;
+    width:500px;
+    left:350px;
+    z-index:1;
+    background:url('images/numbers-2-no-text.png');
+    background-size:500px 300px;
+    text-align:center;
+}
+
+.content3{
+    float:left;
+    position:absolute;
+    height:300px;
+    width:500px;
+    left:500px;
+    z-index:0;
+    background:url('images/numbers-3-no-text.png');
+    background-size:500px 300px;
+    text-align:center;
+}
+
+.learn-more .footer{
+    background-color:transparent;
+}
+
+
